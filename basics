@@ -1,0 +1,38 @@
+public class Main
+{
+	public static void main(String[] args) {
+	   //st bk= new st();
+	   //bk.name= "bhavesh kaushik";
+	   //bk.r_n= 79;
+	   //bk.age= 21;
+	   
+	   //bk.greeting();
+	   
+	   //System.out.println(bk.r_n);
+	   //System.out.println(bk.age);
+	   //System.out.println(bk.name);
+	   
+	   st rahul= new st("rahul bozzz", 23,45);
+	   System.out.println(rahul.r_n);
+	   System.out.println(rahul.age);
+	   System.out.println(rahul.name);
+	}
+}
+class st{
+    int age;
+    String name="bak";
+    int r_n;
+    void greeting(){
+        System.out.println("hi! my name is "+ name);
+    }
+    // st () {
+    //     this.name= "bhavesh";
+    //     this.r_n= 59;
+    //     this.age= 21;
+    // }
+    st (String name,int r_n,int age) {
+        this.name= name;
+        this.r_n= r_n;
+        this.age= age;
+    }
+}
