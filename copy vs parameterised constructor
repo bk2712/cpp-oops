@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+class Student{
+    public:
+    string name;
+    int age;
+    int roll_no;
+    
+    //copy constructor
+    Student(Student& temp){
+        cout<<"this is copy constructor: "<<endl;
+        this->name= temp.name;
+        this->age= temp.age;
+        this->roll_no= temp.roll_no;
+    }
+    
+    //parameterized constructor
+    Student(string name, int age,int roll_no){
+        cout<<"this is parameterised constructor"<<endl;
+        this->name= name;
+        this->age= age;
+        this->roll_no= roll_no;
+    }
+    
+    
+    void print(){
+        cout<<"student name is: "<<this->name<<endl;
+        cout<<"student age is: "<<this->age<<endl;
+        cout<<"student roll_no is: "<<this->roll_no<<endl;
+    }
+    
+};
+
+int main()
+{
+    Student st("Bhavesh", 20,79);
+    st.print();
+    Student st1(st);
+    st1.print();
+}
