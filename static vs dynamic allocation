@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+class Student{
+    public:
+    string name= "bhavesh";
+    int age= 21;
+    int roll_no= 79;
+};
+
+int main()
+{
+    //static allocation
+    cout<<"static allocation"<<endl;
+    Student st;
+    cout<<"student name is: "<<st.name<<endl;
+    cout<<"student age is: "<<st.age<<endl;
+    cout<<"student roll_no is: "<<st.roll_no<<endl;
+    
+    cout<<endl;
+    //dynamic allocation
+    cout<<"dynamic allocation method 1"<<endl;
+    Student *stt= new Student();
+    cout<<"student name is: "<<(*stt).name<<endl;
+    cout<<"student age is: "<<(*stt).age<<endl;
+    cout<<"student roll_no is: "<<(*stt).roll_no<<endl;
+    cout<<endl;
+    cout<<"dynamic allocation method 2"<<endl;
+    cout<<"student name is: "<<stt->name<<endl;
+    cout<<"student age is: "<<stt->age<<endl;
+    cout<<"student roll_no is: "<<stt->roll_no<<endl;
+
+    return 0;
+}
