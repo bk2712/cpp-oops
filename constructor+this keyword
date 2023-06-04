@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Student{
+    public:
+    string name;
+    int age;
+    int roll_no;
+    
+    // use of this keyword
+    Student(string name,int age, int roll_no){
+        this->name= name;
+        this->age= age;
+        this->roll_no= roll_no;
+    } 
+    void print(){
+        cout<<"student name is: "<<name<<endl;
+        cout<<"student age is: "<<age<<endl;
+        cout<<"student roll_no is: "<<roll_no<<endl;
+    }
+};
+
+int main()
+{
+    //this keyword is use when the parametrs have the same value as declared in instance variable
+    //this keyword stores address
+    
+    
+    Student temp("aksha",22,78);
+    temp.print();
+    
+    Student *stt= new Student("Bhavesh",21,79);
+    stt->print();
+    return 0;
+}
