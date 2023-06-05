@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+class Animal{
+    
+    private:
+    string species;
+    
+    public:
+    int age;
+    string name;
+    
+    void setDetails(string species,int age,string name){
+        this->species= species;
+        this->age= age;
+        this->name= name;
+    }
+    string getDetails(){
+        return species;
+    }
+    void print(){
+        cout<<"speices is: "<<this->species<<endl;
+        cout<<"age is: "<<this->age<<endl;
+        cout<<"name is: "<<this->name<<endl;
+    }
+    
+};
+class Human: public Animal{
+    public:
+    void printD(){
+        cout<<"hi! this is human side"<<endl;
+    }
+};
+int main()
+{
+    Human h;
+    h.setDetails("human",20,"bhavesh");
+    h.print();
+    h.printD();
+
+    return 0;
+}
