@@ -1,0 +1,16 @@
+Superclass   |    Childclass     |     type
+public       |    public         |     public
+public       |    protected      |     protected
+public       |    private        |     private
+protected    |    public         |     protected
+protected    |    protected      |     protected
+protected    |    private        |     private
+private      |    public         |     NA
+private      |    protected      |     NA
+private      |    private        |     NA
+
+
+
+PUBLIC---> hr jgha accessible h
+PRIVATE---> sirf same class me hi access kr skte h
+PROTECTED ---->  same class + child class me bhi access kr sktye h
