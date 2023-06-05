@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+class Animal{
+    public:
+    void print(){
+        cout<<"hi this is animal class"<<endl;
+    }
+};
+class Human{
+    public:
+    void print(){
+        cout<<"hi this is human class"<<endl;
+    }
+};
+class C: public Animal, public Human{
+    
+};
+
+int main()
+{
+    C h;
+    h.Animal::print();
+    return 0;
+}
