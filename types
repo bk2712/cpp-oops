@@ -1,0 +1,178 @@
+// 1. single inheritence
+
+
+#include <iostream>
+
+using namespace std;
+
+// class A{
+//     public:
+//     string name= "Bhavesh";
+//     void print(){
+//         cout<<"this is our base class!"<<endl;
+//     }
+// };
+// class B: public A{
+//     public:
+//     void prints(){
+//         cout<<"this is our derived class!"<<endl;
+//     }
+// };
+// int main()
+// {
+//     B obj;
+//     obj.print();
+//     obj.prints();
+//     cout<<obj.name;
+//     return 0;
+// }
+
+
+
+// 2. multilevel
+
+// class A{
+//     public:
+//     string name= "Bhavesh";
+//     void print(){
+//         cout<<"this is our base class!"<<endl;
+//     }
+// };
+// class B: public A{
+//     public:
+//     void prints(){
+//         cout<<"this is our derived class!"<<endl;
+//     }
+// };
+// class C: public B{
+//     public:
+//     void printc(){
+//         cout<<"this is our multilevel derived class!"<<endl;
+//     }
+// };
+// int main()
+// {
+//     C obj;
+//     obj.print();
+//     obj.prints();
+//     obj.printc();
+//     cout<<obj.name;
+//     return 0;
+// }
+
+
+
+
+// 3. multiple
+
+// class A{
+//     public:
+//     string name= "Bhavesh";
+//     void print(){
+//         cout<<"this is our base class A!"<<endl;
+//     }
+// };
+// class B{
+//     public:
+//     void prints(){
+//         cout<<"this is our base class B!"<<endl;
+//     }
+// };
+// class C: public A, public B{
+//     public:
+//     void printc(){
+//         cout<<"this is our multilevel derived class C!"<<endl;
+//     }
+// };
+// int main()
+// {
+//     C obj;
+//     obj.print();
+//     obj.prints();
+//     obj.printc();
+//     cout<<obj.name;
+//     return 0;
+// }
+
+
+
+
+// 4. hierarchical
+
+// class A{
+//     public:
+//     string name= "Bhavesh";
+//     void print(){
+//         cout<<"this is our base class!"<<endl;
+//     }
+// };
+// class B: public A{
+//     public:
+//     void prints(){
+//         cout<<"this is our derived class B!"<<endl;
+//     }
+// };
+// class C: public A{
+//     public:
+//     void printc(){
+//         cout<<"this is our derived class C!"<<endl;
+//     }
+// };
+// class D: public B{
+//     public:
+//     void printd(){
+//         cout<<"this is our hierarchical class D!"<<endl; 
+//     }
+// };
+// int main()
+// {
+//     D obj;
+//     obj.print();
+//     obj.prints();
+//     // obj.printc();
+//     obj.printd();
+//     cout<<obj.name;
+//     return 0;
+// }
+
+
+
+
+// 5. hybrid
+
+
+class A{
+    public:
+    string name= "Bhavesh";
+    void print(){
+        cout<<"this is our base class A!"<<endl;
+    }
+};
+class B: public A{
+    public:
+    void prints(){
+        cout<<"this is our derived class B!"<<endl;
+    }
+};
+class D{
+    public:
+    void printd(){
+        cout<<"this is base class D!"<<endl;
+    }
+};
+class C: public A,public D{
+    public:
+    void printc(){
+        cout<<"this is our hybrid derived class C!"<<endl;
+    }
+};
+int main()
+{
+    C obj;
+    obj.print();
+    // obj.prints();
+    obj.printc();
+    obj.printd();
+    cout<<obj.name;
+    return 0;
+}
