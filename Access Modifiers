@@ -1,3 +1,39 @@
+
+
+// access modifier
+
+
+#include <iostream>
+
+using namespace std;
+
+
+class A{
+    private:
+    string name= "Bhavesh";
+    void print(){
+        cout<<"this is our base class!"<<endl;
+    }
+};
+class B: private A{
+    public:
+    void prints(){
+        cout<<"this is our derived class!"<<endl;
+    }
+    string getname(){
+        return this->name;
+    }
+};
+int main()
+{
+    B obj;
+    cout<<obj.getname();
+    return 0;
+}
+
+
+
+
 Superclass   |    Childclass     |     type
 public       |    public         |     public
 public       |    protected      |     protected
