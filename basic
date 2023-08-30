@@ -1,0 +1,40 @@
+//encapsulation
+
+// encapsulation is done for code 
+// 1. code reusability
+// 2. data hiding
+// 3. wrapping up of data
+
+
+#include <iostream>
+
+using namespace std;
+
+class A{
+    private:
+    int age;
+    string name;
+    public:
+    void setName(string myname){
+        this->name= myname;
+    }
+    void setAge(int myage){
+        this->age= myage;
+    }
+    int getAge(){
+        return age;
+    }
+    string getName(){
+        return name;
+    }
+};
+
+int main()
+{
+    A obj;
+    obj.setName("Bhavesh");
+    obj.setAge(21);
+    cout<<"my name: "<<obj.getName()<<endl;
+    cout<<"my age: "<<obj.getAge()<<endl;
+    return 0;
+}
