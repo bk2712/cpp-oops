@@ -1,42 +1,65 @@
+
+// parameterized constructor
+
+
 #include <iostream>
 
 using namespace std;
 
-class Student{
-    public:
-    string name;
-    int age;
-    int roll_no;
+// class A{
+//     public:
     
-    //copy constructor
-    Student(Student& temp){
-        cout<<"this is copy constructor: "<<endl;
+//     string name= "Goldy";
+//     int age= 20;
+//     A(string name,int age){
+//         this->name= name;
+//         this->age= age;    //uper wle name or age ko permamently change kr dia h
+//     }
+//     void print(){
+//         cout<<"Hi my name is "<<name<<" "<<"and my age is "<<age<<endl; 
+//     }
+// };
+// int main()
+// {
+//     A obj("Bhavesh", 21);
+//     obj.print();
+
+//     return 0;
+// }
+
+
+
+// copy constructor
+
+
+class A{
+    public:
+    
+    string name= "Goldy";
+    int age= 20;
+    A(string name,int age){
+        this->name= name;
+        this->age= age;    //uper wle name or age ko permamently change kr dia h
+    }
+    
+    A(A &temp){
         this->name= temp.name;
         this->age= temp.age;
-        this->roll_no= temp.roll_no;
     }
-    
-    //parameterized constructor
-    Student(string name, int age,int roll_no){
-        cout<<"this is parameterised constructor"<<endl;
-        this->name= name;
-        this->age= age;
-        this->roll_no= roll_no;
-    }
-    
     
     void print(){
-        cout<<"student name is: "<<this->name<<endl;
-        cout<<"student age is: "<<this->age<<endl;
-        cout<<"student roll_no is: "<<this->roll_no<<endl;
+        cout<<"Hi my name is "<<name<<" "<<"and my age is "<<age<<endl; 
     }
-    
 };
-
 int main()
 {
-    Student st("Bhavesh", 20,79);
-    st.print();
-    Student st1(st);
-    st1.print();
+    A obj("Bhavesh", 21);  //phla obj jo ki parameterized constructor ka part h
+    obj.print();
+    
+    cout<<endl<<"hi new one!"<<endl;
+    
+    A obj2(obj);          // dusra obj jo ki copy constructor ka part h or usme hmne phle obj(obj) ko pass kr dia h
+    obj2.print();
+    
+    return 0;
 }
