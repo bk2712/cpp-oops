@@ -1,0 +1,63 @@
+// polymorphism
+
+// compile time
+
+// function overloading
+//        same name but different parameter
+
+
+#include <iostream>
+
+using namespace std;
+
+// class A{
+//     public:
+//     string name= "Goldy";
+//     void print(){
+//         cout<<"Say Hello!"<<endl;
+//     }
+//     //this keyword se Goldy ko access kr skte He
+//     void print(string name){
+//         cout<<"Say Hello to my friend: "<<name; 
+//     }
+// };
+// int main()
+// {
+//     A obj;
+//     obj.print();
+//     obj.print("Bhavesh");
+//     return 0;
+// }
+
+
+
+
+// runtime polymorphism
+
+// method overriding
+
+
+class A{
+    public:
+    void func(){
+        cout<<"Hi this is base class A!"<<endl;
+    }
+};
+class B{
+    public:
+    void func(){
+        cout<<"Hi this is base class B!"<<endl;
+    }
+};
+class C: public A, public B{
+    public:
+    void func(){
+        cout<<"Hi this is derived class C!"<<endl;
+    }
+};
+int main()
+{
+    C obj;
+    obj.func();
+    return 0;
+}
